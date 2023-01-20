@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ReleaXApp: App {
+    
+    @StateObject var buildVM = BuildsVM()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(buildVM)
         }
     }
 }
